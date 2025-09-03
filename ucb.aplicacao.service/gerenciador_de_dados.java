@@ -1,7 +1,6 @@
-import Java.util.Scanner;
-import Java.util.List;
-
-Scanner entrada = new Scanner(System.in);
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
 public class GerenciadorDeDados {
     private List<String> dados;
@@ -32,11 +31,18 @@ public class GerenciadorDeDados {
 
     public static void main(String[] args) {
         GerenciadorDeDados gerenciador = new GerenciadorDeDados(new ArrayList<>());
+        Scanner entrada = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Escolha uma opção: 1-Adicionar Dado, 2-Remover Dado, 3-Listar Dados, 4-Sair");
+            System.out.println("\nEscolha uma opção:");
+            System.out.println("1 - Adicionar Dado");
+            System.out.println("2 - Remover Dado");
+            System.out.println("3 - Listar Dados");
+            System.out.println("4 - Sair");
+            
+            System.out.print("Opção: ");
             int opcao = entrada.nextInt();
-            entrada.nextLine(); // Consumir a nova linha
+            entrada.nextLine(); // Consumir a quebra de linha
 
             switch (opcao) {
                 case 1:
@@ -54,6 +60,7 @@ public class GerenciadorDeDados {
                     break;
                 case 4:
                     System.out.println("Saindo...");
+                    entrada.close();
                     return;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
