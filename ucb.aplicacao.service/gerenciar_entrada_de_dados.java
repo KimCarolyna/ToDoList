@@ -34,37 +34,52 @@ public class GerenciadorDeDados {
         Scanner entrada = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\nEscolha uma opção:");
-            System.out.println("1 - Adicionar Dado");
-            System.out.println("2 - Remover Dado");
-            System.out.println("3 - Listar Dados");
-            System.out.println("4 - Sair");
-            
-            System.out.print("Opção: ");
-            int opcao = entrada.nextInt();
-            entrada.nextLine(); // Consumir a quebra de linha
+    System.out.println("\nEscolha uma opção:");
+    System.out.println("1 - Criar tarefa");
+    System.out.println("2 - Listar tarefas");
+    System.out.println("3 - Atualizar tarefa");
+    System.out.println("4 - Remover tarefa");
+    System.out.println("5 - Sair");
 
-            switch (opcao) {
-                case 1:
-                    System.out.print("Digite o dado a ser adicionado: ");
-                    String dadoAdicionar = entrada.nextLine();
-                    gerenciador.adicionarDado(dadoAdicionar);
-                    break;
-                case 2:
-                    System.out.print("Digite o dado a ser removido: ");
-                    String dadoRemover = entrada.nextLine();
-                    gerenciador.removerDado(dadoRemover);
-                    break;
-                case 3:
-                    gerenciador.listarDados();
-                    break;
-                case 4:
-                    System.out.println("Saindo...");
-                    entrada.close();
-                    return;
-                default:
-                    System.out.println("Opção inválida. Tente novamente.");
-            }
-        }
+    System.out.print("Opção: ");
+    int opcao = entrada.nextInt();
+    entrada.nextLine(); // Consumir a quebra de linha
+
+    switch (opcao) {
+        case 1:
+            System.out.print("Digite a nova tarefa: ");
+            String novaTarefa = entrada.nextLine();
+            gerenciador.criarTarefa(novaTarefa);
+            break;
+
+        case 2:
+            gerenciador.listarTarefas();
+            break;
+
+        case 3:
+            gerenciador.listarTarefas();
+            System.out.print("Digite o índice da tarefa a atualizar (começa em 0): ");
+            int indiceAtualizar = entrada.nextInt();
+            entrada.nextLine();
+            System.out.print("Digite a nova descrição da tarefa: ");
+            String tarefaAtualizada = entrada.nextLine();
+            gerenciador.atualizarTarefa(indiceAtualizar, tarefaAtualizada);
+            break;
+
+        case 4:
+            gerenciador.listarTarefas();
+            System.out.print("Digite o índice da tarefa a remover (começa em 0): ");
+            int indiceRemover = entrada.nextInt();
+            entrada.nextLine();
+            gerenciador.removerTarefa(indiceRemover);
+            break;
+
+        case 5:
+            System.out.println("Saindo...");
+            entrada.close();
+            return;
+
+        default:
+            System.out.println("Opção inválida. Tente novamente.");
     }
 }
