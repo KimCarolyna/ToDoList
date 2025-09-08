@@ -41,7 +41,6 @@ public class GerenciadorDeDados {
     System.out.println("4 - Remover tarefa");
     System.out.println("5 - Sair");
 
-    System.out.print("Opção: ");
     int opcao = entrada.nextInt();
     entrada.nextLine(); // Consumir a quebra de linha
 
