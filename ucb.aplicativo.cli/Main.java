@@ -1,80 +1,64 @@
 import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
 
-public class GerenciadorDeDados {
-    private List<String> dados;
-
-    public GerenciadorDeDados(List<String> dadosIniciais) {
-        this.dados = dadosIniciais;
-    }
-
-    public void adicionarDado(String dado) {
-        dados.add(dado);
-        System.out.println("Dado adicionado com sucesso.");
-    }
-
-    public void removerDado(String dado) {
-        if (dados.remove(dado)) {
-            System.out.println("Dado removido com sucesso.");
-        } else {
-            System.out.println("Dado não encontrado.");
-        }
-    }
-
-    public void listarDados() {
-        System.out.println("Dados atuais:");
-        for (String dado : dados) {
-            System.out.println(dado);
-        }
-    }
-
-    public static void main(String[] args) {
-        GerenciadorDeDados gerenciador = new GerenciadorDeDados(new ArrayList<>());
+public class Main {
+    public static void main (String[]args) {
+        TarefaServico servico = new TarefaServico();
         Scanner entrada = new Scanner(System.in);
 
-        while (true) {
-    System.out.println("\nEscolha uma opção:");
-    System.out.println("1 - Criar tarefa");
-    System.out.println("2 - Listar tarefas");
-    System.out.println("3 - Atualizar tarefa");
-    System.out.println("4 - Remover tarefa");
-    System.out.println("5 - Sair");
+    while (true) {
+        System.out.println("----MENU----");
+        System.out.println("1 - Criar tarefa");
+        System.out.println("2 - Listar tarefas");
+        System.out.println("3 - Atualizar tarefa");
+        System.out.println("4 - Remover tarefa");
+        System.out.println("5 - Marcar como concluída");
+        System.out.println("6 - Sair");
+        System.out.println("\nEscolha uma opção:");
 
     int opcao = entrada.nextInt();
-    entrada.nextLine(); // Consumir a quebra de linha
+    entrada.nextLine();
 
     switch (opcao) {
         case 1:
-            System.out.print("Digite a nova tarefa: ");
-            String novaTarefa = entrada.nextLine();
-            gerenciador.criarTarefa(novaTarefa);
+            System.out.print("Título: ");
+            String titulo = entrada.nextLine();
+            System.out.print("Descrição: ");
+            String descricao = entrada.nextLine();
+            servico.criarTarefa(titulo, descricao);
             break;
+
 
         case 2:
             gerenciador.listarTarefas();
             break;
 
         case 3:
-            gerenciador.listarTarefas();
-            System.out.print("Digite o índice da tarefa a atualizar (começa em 0): ");
-            int indiceAtualizar = entrada.nextInt();
+            System.out.print("ID da tarefa a atualizar: ");
+            int idAtualizar = entrada.nextInt();
             entrada.nextLine();
-            System.out.print("Digite a nova descrição da tarefa: ");
-            String tarefaAtualizada = entrada.nextLine();
-            gerenciador.atualizarTarefa(indiceAtualizar, tarefaAtualizada);
+            System.out.print("Novo título: ");
+            String novoTitulo = entrada.nextLine();
+            System.out.print("Nova descrição: ");
+            String novaDescricao = entrada.nextLine();
+            servico.atualizarTarefa(idAtualizar, novoTitulo, novaDescricao);
             break;
-
+            
         case 4:
-            gerenciador.listarTarefas();
-            System.out.print("Digite o índice da tarefa a remover (começa em 0): ");
-            int indiceRemover = entrada.nextInt();
+            System.out.print("ID da tarefa a remover: ");
+            int idRemover = entrada.nextInt();
             entrada.nextLine();
-            gerenciador.removerTarefa(indiceRemover);
+            servico.removerTarefa(idRemover);
             break;
 
         case 5:
-            System.out.println("Saindo...");
+            System.out.print("ID da tarefa a marcar como concluída: ");
+            int idConcluir = entrada.nextInt();
+            entrada.nextLine();
+            servico.marcarComoConcluida(idConcluir);
+            break;
+
+        case 6:
+            System.out.println("Saino...");
             entrada.close();
             return;
 
