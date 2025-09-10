@@ -24,6 +24,15 @@ public class Tarefa {
         this.dataAgora = dataAgora;
     }
 
+ @Override
+    public String toString() {
+        return "ID: " + id +
+               ", Título: " + titulo +
+               ", Descrição: " + descricao +
+               ", Concluída: " + (completa ? "Sim" : "Não") +
+               ", Data: " + dataAgora;
+    }
+
     public int getID() {
         return id;
     }
@@ -50,6 +59,9 @@ public class Tarefa {
 
     public boolean isCompleta() {
         return completa;
+    }
+    public void setCompleta(boolean completa) {
+        this.completa = completa;
     }
 //teste
 
