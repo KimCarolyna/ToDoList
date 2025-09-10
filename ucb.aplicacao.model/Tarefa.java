@@ -18,7 +18,7 @@ public class Tarefa {
         this.titulo = titulo;
     }
 
-    public Tarefa(Long id, String titulo, String descricao, boolean completa){
+    public Tarefa(int id, String titulo, String descricao, boolean completa){
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
