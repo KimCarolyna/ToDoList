@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 
 public class Tarefa {
     
-    private Long id;
+    private int id;
     private String titulo;
     private String descricao;
     private boolean completa;
