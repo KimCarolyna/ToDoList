@@ -61,6 +61,7 @@ public class Tarefa {
     public boolean isCompleta() {
         return completa;
     }
+//teste
 
     public void setCompleta(boolean completa) {
         this.completa = completa;
