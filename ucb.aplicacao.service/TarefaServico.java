@@ -1,4 +1,3 @@
-import ucb.aplicacao.model.Tarefa;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -30,7 +29,7 @@ public class TarefaServico {
     }
 
     public static void main(String[] args) {
-        TarefaServiso gerenciador = new TarefaServiso(new ArrayList<>());
+        TarefaServico gerenciador = new TarefaServico(new ArrayList<>());
         Scanner entrada = new Scanner(System.in);
 
          while (true) {
