@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class TarefaServico {
     private List<String> tarefas;
     
-    public TarefaServico(List<String> tarefasIniciais) {
+    public TarefaServiço(List<String> tarefasIniciais) {
         this.tarefas = tarefasIniciais;
     }
 
@@ -29,7 +29,7 @@ public class TarefaServico {
     }
 
     public static void main(String[] args) {
-        TarefaServico gerenciador = new TarefaServico(new ArrayList<>());
+        TarefaServiço gerenciador = new TarefaServiço(new ArrayList<>());
         Scanner entrada = new Scanner(System.in);
 
          while (true) {
