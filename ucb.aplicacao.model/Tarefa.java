@@ -53,7 +53,4 @@ public class Tarefa {
     }
 //teste
 
-    public void setCompleta(boolean completa) {
-        this.completa = completa;
-    }
 }
