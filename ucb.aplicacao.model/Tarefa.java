@@ -24,7 +24,7 @@ public class Tarefa {
         this.dataAgora = dataAgora;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
