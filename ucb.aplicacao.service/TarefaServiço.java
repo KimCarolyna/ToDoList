@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class TarefaServico {
+public class TarefaServiço {
     private List<String> tarefas;
     
     public TarefaServiço(List<String> tarefasIniciais) {
@@ -40,10 +40,10 @@ public class TarefaServico {
             System.out.println("4 - Remover tarefa");
             System.out.println("5 - Sair");
 
-            int opcao = entrada.nextInt();
+            int opção = entrada.nextInt();
             entrada.nextLine(); // Consumir quebra de linha
 
-            switch (opcao) {
+            switch (opção) {
                 case 1:
                     System.out.print("Digite a nova tarefa: ");
                     String novaTarefa = entrada.nextLine();
