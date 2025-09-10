@@ -32,4 +32,15 @@ public class TarefaServico {
     public static void main(String[] args) {
         TarefaServiso gerenciador = new TarefaServiso(new ArrayList<>());
         Scanner entrada = new Scanner(System.in);
+
+         while (true) {
+            System.out.println("\nEscolha uma opção:");
+            System.out.println("1 - Criar tarefa");
+            System.out.println("2 - Listar tarefas");
+            System.out.println("3 - Atualizar tarefa");
+            System.out.println("4 - Remover tarefa");
+            System.out.println("5 - Sair");
+
+            int opcao = entrada.nextInt();
+            entrada.nextLine(); // Consumir quebra de linha
 }
