@@ -8,16 +8,6 @@ public class Tarefa {
     private boolean completa;
     private LocalDateTime dataAgora;
 
-    public Tarefa() {
-        this.dataAgora = LocalDateTime.now();
-        this.completa = false;
-    }
-
-    public Tarefa(String titulo){
-        this();
-        this.titulo = titulo;
-    }
-
     public Tarefa(int id, String titulo, String descricao, boolean completa){
         this.id = id;
         this.titulo = titulo;
