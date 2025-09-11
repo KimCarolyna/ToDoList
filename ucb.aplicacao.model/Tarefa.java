@@ -8,11 +8,11 @@ public class Tarefa {
     private boolean completa;
     private LocalDateTime dataAgora;
 
-    public Tarefa(int id, String titulo, String descricao, boolean completa){
+    public Tarefa(int id, String titulo, String descricao){
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
-        this.completa = completa;
+        this.completa = false;
         this.dataAgora = LocalDateTime.now();
     }
 

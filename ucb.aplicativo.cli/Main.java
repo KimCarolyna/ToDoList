@@ -29,7 +29,7 @@ public class Main {
 
 
         case 2:
-            gerenciador.listarTarefas();
+            servico.listarTarefa();
             break;
 
         case 3:
@@ -64,5 +64,7 @@ public class Main {
 
         default:
             System.out.println("Opção inválida. Tente novamente.");
+            }
+        }
     }
 }

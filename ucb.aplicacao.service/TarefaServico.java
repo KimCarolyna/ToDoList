@@ -3,7 +3,7 @@ import java.util.List;
 
 public class TarefaServico {
     private List<Tarefa> tarefas = new ArrayList<>();
-    orivate int contadorID = 1;
+    private int contadorID = 1;
 
 
     public void criarTarefa(String titulo, String descricao) {
@@ -31,7 +31,7 @@ public class TarefaServico {
     }
 
     public void removerTarefa(int id) {
-        boolean removida = tarefas.removeIF(t -> t.getID() == id);
+        boolean removida = tarefas.removeIf(t -> t.getID() == id);
         if (removida) {
             System.out.println("Tarefa removida com sucesso");
         } else {
