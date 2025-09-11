@@ -17,9 +17,11 @@ Ele permite criar, listar, atualizar, remover e marcar tarefas como concluídas.
 
 ## 📂 Estrutura do Projeto
 📦 GerenciadorTarefas
+```bash
 ┣ 📜 Main.java # Classe principal, contém o menu interativo
 ┣ 📜 TarefaServico.java # Classe de serviço, implementa a lógica de CRUD
 ┣ 📜 Tarefa.java # Classe modelo, representa uma tarefa
+```
 
 ---
 
@@ -34,6 +36,7 @@ Ele permite criar, listar, atualizar, remover e marcar tarefas como concluídas.
 ---
 
 Exemplo de menu:
+```bash
 ----MENU----
 1 - Criar tarefa
 2 - Listar tarefas
@@ -41,6 +44,7 @@ Exemplo de menu:
 4 - Remover tarefa
 5 - Marcar como concluída
 6 - Sair
+```
 
 ---
 
