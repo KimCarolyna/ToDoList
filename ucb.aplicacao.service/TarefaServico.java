@@ -9,7 +9,7 @@ public class TarefaServico {
     public void criarTarefa(String titulo, String descricao) {
         Tarefa nova = new Tarefa (contadorID++, titulo, descricao);
         tarefas.add(nova);
-        System.out.println("Tarefa criada com sucesso!");
+        System.out.println("\nTarefa criada com sucesso!\n");
     }
     public void listarTarefa(){
         if (tarefas.isEmpty()) {

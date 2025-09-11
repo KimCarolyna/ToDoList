@@ -13,7 +13,7 @@ public class Main {
         System.out.println("4 - Remover tarefa");
         System.out.println("5 - Marcar como concluída");
         System.out.println("6 - Sair");
-        System.out.println("\nEscolha uma opção:");
+        System.out.printf("\nEscolha uma opção:");
 
     int opcao = entrada.nextInt();
     entrada.nextLine();
