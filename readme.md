@@ -73,12 +73,3 @@ Exemplo de saída ao listar:
 ID: 1, Título: Estudar, Descrição: Revisar Java, Concluída: Não, Data: 10/09/2025 23:12
 
 ---
-
-## ▶️ Como executar
-
-1. Compile os arquivos:
-   ```bash
-   javac Main.java TarefaServico.java Tarefa.java
-   ```
-   Execute o programa:
-   java Main
